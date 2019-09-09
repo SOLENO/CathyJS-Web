@@ -18,7 +18,7 @@ npm i cathyjs
 ```js
 const cathyjs = require("cathyjs");
 
-let res = cathyjs.startChatting("hello"); // replace your message in the place of hello
+let res = cathyjs.startChatting("hello"); // replace your message
 
 // res will be reply message. 
 ```
