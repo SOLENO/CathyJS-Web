@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CATHYJS</title>
+    <meta name="description" content="CATHYJS, An API wrapper for powerful AI chatbot API.">
+    <link id="favicon" rel="icon" href="https://cdn.dribbble.com/users/722835/screenshots/4082720/bot_icon.gif" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="/style.css">
+    
+
+    <script src="/client.js" defer></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script>
+    var socket = io()
+      
+    </script>
+  </head>
+  <body>
+    <a  href=""><img src="https://cdn.dribbble.com/users/722835/screenshots/4082720/bot_icon.gif" style="width:5%; height:10%; position: absolute; top: 0; left: 0; margin: 10px;"></a>
+    <div align="center">
+      
+    <h5>
+      <b>Welcome To CathyJS</b>
+      </h5>
+  <h1>
+    CATHYJS
+    </h1>
+      
+        <div class="farm">
+    
+    Message: <input type="text" id="q" placeholder="Your Message Here...">
+    <button id="butt" onclick="submit()">
+     CHAT
+    </button>
+    <button id="button" onclick="window.location.reload()">
+     CLEAR
+    </button>
+                </div>
+            
+
+      
+    <p id="res">
+      <b>Chat-Logs:</b>
+    </p>
+      
+      <ul id="messages"></ul>
+    <script>
+      var input = document.getElementById('q');
+      var quest = document.getElementById('messages')
+      
+      
+        function submit() {
+          var li = document.createElement("li");
+      var ques = input.value;
+          if (!ques) return alert("❌ Ahh, Looks like you forgot to provide input query!");
+        input.value = ""
+          socket.emit('question', {q: ques})
+          li.innerHTML = '<b>Me:</b> '+ques;
+          quest.appendChild(li);
+    }
+      
+      document.onkeydown = function(event) {
+        var e = event.keyCode || window.event.keyCode
+        if (e == 13) submit()
+    }
+    </script>
+
+    <script>
+      socket.on('res', function(data) {
+        var lires = document.createElement('li');
+        lires.innerHTML = '<b>CathyJS:</b> '+data.res;
+        quest.appendChild(lires);
+        res.innerHTML = ''
+      })
+    </script>
+      </div>
+    <p style="position: fixed; bottom: 0; right: 0; margin: 10px; background-color: grey; padding: 5px;">
+      &copy SOLENO-API
+    </p>
+  </body>
+</html>
