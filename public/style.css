@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  margin: 2em;
+  background-image: url("https://canal.uned.es/bundles/pumukitpaellaplayer/paella/player/config/profiles/resources/default_background_paella.jpg");
+  background-size: cover;
+}
+
+h1 {
+  font-style: bold;
+  color: #ffffff;
+}
+
+.bold {
+  font-weight: bold;
+  color: #ffffff;
+}
+b {
+  color: #ffffff;
+  font-size: 16px;
+}
+p {
+  max-width: 600px;
+  color: #ffffff;  
+}
+
+form {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: cyan;
+  display: inline-block;
+  width: 100%;
+  max-width: 340px;
+  border-radius: 3px;
+  
+}
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 50%;
+  height: 2%;
+  border: 1px solid black;
+  border-radius: 3px;
+  font-size: 16px;
+  margin: 5px;
+  background-color: #101211;
+  color: #ffffff;
+  
+}
+
+button {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: #212622;
+  border: 1px solid #ffffff;
+  box-shadow: 2px 2px teal;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+button:hover {
+  background-color: #111211;
+  color: #ffffff;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+footer {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid #ffffff;
+}
+      #messages { list-style-type: none; margin: 0; padding: 0; width: 50%;}
+      #messages li { padding: 5px 10px; background: #212622; color: white; }
+      #messages li:nth-child(odd) { background: ##000000; }
+#farm {
+  position: fixed;
+}
