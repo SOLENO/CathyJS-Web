@@ -22,9 +22,9 @@ let locx, locy
 io.on('connection', async function(socket){
 console.log(socket)
   socket.on('question', async function(data) {
-            let k = await cathyjs.startChatting(data.q)
+            let reply = await cathyjs.startChatting(data.q)
               
-                socket.emit('res', {res: k});
+                socket.emit('res', {res: reply});
             });
   
   })
