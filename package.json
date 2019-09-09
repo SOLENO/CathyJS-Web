@@ -1,0 +1,23 @@
+{
+  "name": "cathyjs",
+  "version": "0.0.1",
+  "description": "An API wrapper for Acobot AI.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1",
+    "cathyjs": "^5.0.0"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
