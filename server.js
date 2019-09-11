@@ -20,7 +20,6 @@ app.use('/', express.static(__dirname + '/views'));
 
 let locx, locy
 io.on('connection', async function(socket){
-console.log(socket)
   socket.on('question', async function(data) {
             let reply = await cathyjs.startChatting(data.q)
               
