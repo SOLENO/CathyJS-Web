@@ -20,5 +20,6 @@ const cathyjs = require("cathyjs");
 
 let res = cathyjs.startChatting("hello"); // replace your message
 
+console.log(res);
 // res will be reply message. 
 ```
